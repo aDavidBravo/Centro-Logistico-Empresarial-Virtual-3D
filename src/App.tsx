@@ -7,6 +7,7 @@ import { Inspector } from './dashboard/Inspector';
 import { AlertTicker } from './dashboard/AlertTicker';
 import { AIPanel } from './dashboard/AIPanel';
 import { SceneToolbar } from './dashboard/SceneToolbar';
+import { WhatIfModal } from './dashboard/WhatIfModal';
 import { useStore } from './store/useStore';
 
 export default function App() {
@@ -76,6 +77,9 @@ export default function App() {
           )}
         </div>
       </div>
+
+      {/* What-If Modal */}
+      <WhatIfModal />
     </div>
   );
 }
