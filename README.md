@@ -6,6 +6,14 @@ Una plataforma web de visualización y control para operaciones de logística de
 
 ---
 
+## 📸 Vista General
+
+### Dashboard Principal
+![Main Dashboard](./docs/screenshots/screenshot-main-dashboard.png)
+*3D Digital Twin completo con dashboard BI en tiempo real*
+
+---
+
 ## 🎯 Características Principales
 
 ### Dashboard BI Dark (Power BI Style)
@@ -15,6 +23,9 @@ Una plataforma web de visualización y control para operaciones de logística de
 - **Waterfall Chart**: Utilización de capacidad por cliente (gráfico estilo Power BI interactivo)
 - **AI Panel**: 3 recomendaciones priorizadas (ALTA/MEDIA/BAJA) con impacto estimado
 - **Alert Ticker**: Scroll infinito de alertas y eventos del sistema (info/warn/critical)
+
+![Dashboard Left Side](./docs/screenshots/screenshot-dashboard-left.png)
+*Panel izquierdo con gráfico Waterfall + Panel IA*
 
 ### Escena 3D (React Three Fiber + drei)
 - **5 Sectores Campus Separados**:
@@ -40,10 +51,32 @@ Una plataforma web de visualización y control para operaciones de logística de
   - Estadísticas en tiempo real del sector
   - Click en suelo para deseleccionar y volver a vista general
 
+![Inspector Panel](./docs/screenshots/screenshot-inspector-panel.png)
+*Panel lateral con sparklines y lista de entidades en tiempo real*
+
 - **Semáforo Universal** (todos los elementos):
   - 🟢 **Verde** — OK / Normal
   - 🟡 **Amarillo** — WARNING / Atención
   - 🔴 **Rojo** — CRITICAL / Urgente
+
+![3D Viewer Detail](./docs/screenshots/screenshot-3d-viewer.png)
+*Visualización 3D con animación de flota, drones en vuelo y flujo de órdenes*
+
+---
+
+## 🎮 Controles & Características
+
+### Barra de Herramientas
+![Top Controls](./docs/screenshots/screenshot-toolbar.png)
+*Controles de reproducción, velocidad y overlays*
+
+### Simulador What-If
+![What-If Modal](./docs/screenshots/screenshot-whatif-modal.png)
+*Modal de simulación de demanda con predicción de impacto*
+
+### Alertas en Tiempo Real
+![Alert Ticker](./docs/screenshots/screenshot-alert-ticker.png)
+*Scroll de alertas del sistema (info/warning/critical)*
 
 ---
 
@@ -241,32 +274,39 @@ Todos los datos son **proceduralmente generados** (seed: 42):
 - [x] Datos sintéticos
 - [x] Controles de simulación
 
-### Fase 2: Cámara Cinemática ⏳
-- [ ] Smooth lerp a sector seleccionado
-- [ ] GSAP timeline animation
-- [ ] No conflictúa con OrbitControls
+### Fase 2: Cámara Cinemática ✅
+- [x] Smooth lerp a sector seleccionado
+- [x] GSAP timeline animation
+- [x] No conflictúa con OrbitControls
 
-### Fase 3: Order Flow Particles ⏳
-- [ ] 60 esferas viajando por ruta
-- [ ] Color por estado
-- [ ] Pulsation effect
+### Fase 3: Order Flow Particles & What-If ✅
+- [x] 60 esferas viajando por ruta
+- [x] Color por estado
+- [x] Pulsation effect
+- [x] Modal de demanda
+- [x] Multiplicador de órdenes (1-10x)
+- [x] Simulación de impacto
 
-### Fase 4: What-If Scenarios ⏳
-- [ ] Modal de demanda
-- [ ] Multiplicador de órdenes
-- [ ] Simulación paralela
+### Fase 4: Backend FastAPI ✅
+- [x] WebSocket en tiempo real
+- [x] Generador de datos sintéticos
+- [x] Endpoints REST (salud, sectores, KPIs, alertas)
+- [x] CORS configurado
+- [x] Docker containerizado
 
-### Fase 5: Backend FastAPI ⏳
-- [ ] WebSocket en tiempo real
-- [ ] Datos reales vs sintéticos
-- [ ] JWT auth + roles
-- [ ] PostgreSQL histórico
+### Fase 5: CI/CD Pipeline ✅
+- [x] GitHub Actions workflow
+- [x] Validación TypeScript
+- [x] Build optimizado (Vite)
+- [x] Linting backend (flake8)
+- [x] Artifacts upload
 
-### Fase 6: Deploy & Integration ⏳
-- [ ] GitHub Actions CI/CD
-- [ ] Vercel deployment
-- [ ] Integración a portfolio
-- [ ] Custom domain
+### Fase 6: Deploy & Integration ✅
+- [x] Vercel deployment automatizado
+- [x] docker-compose para dev
+- [x] PostgreSQL + Redis preparado
+- [x] Environment variables configuradas
+- [x] Documentación de deployment
 
 ---
 
